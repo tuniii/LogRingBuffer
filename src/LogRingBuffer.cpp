@@ -27,10 +27,6 @@ LogRingBuffer::LogRingBuffer()
 
 LogRingBuffer::~LogRingBuffer()
 {
-  if (buffer != NULL)
-  {
-    delete[] buffer;
-  }
 }
 
 size_t LogRingBuffer::write(uint8_t character)
