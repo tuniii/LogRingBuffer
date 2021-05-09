@@ -71,3 +71,8 @@ String LogRingBuffer::get()
 
   return logString;
 }
+
+void *LogRingBuffer::operator new(size_t size)
+{
+  return psramFound() ? ps_malloc(size) : malloc(size);
+}

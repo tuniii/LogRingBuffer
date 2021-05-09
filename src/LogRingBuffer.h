@@ -33,6 +33,7 @@ public:
   ~LogRingBuffer();
   size_t write(uint8_t character);
   String get();
+  void * operator new(size_t size);
 
 private:
   char buffer[LOG_BUFFER_SIZE];
